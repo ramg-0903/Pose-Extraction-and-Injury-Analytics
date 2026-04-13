@@ -1,0 +1,13 @@
+{
+  "n_components": 7,
+  "explained_variance": 0.9594,
+  "variance_threshold": 0.95,
+  "high_risk_percentile": 90.0,
+  "high_risk_threshold": 0.068703,
+  "error_mean": 0.032589,
+  "error_std": 0.046003,
+  "n_high_risk": 243,
+  "n_total": 2428,
+  "high_risk_pct": 10.01,
+  "min_components_guard": 3
+}

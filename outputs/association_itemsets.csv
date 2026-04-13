@@ -1,0 +1,21 @@
+support,itemsets
+0.48517298187808894,rushed_descent
+0.24258649093904447,high_jerk
+0.13467874794069193,"high_jerk, rushed_descent"
+0.13179571663920922,asymmetric_start
+0.13097199341021418,asymmetric_depth
+0.11326194398682043,unstable_return
+0.085667215815486,"asymmetric_depth, asymmetric_start"
+0.08072487644151564,incomplete_depth
+0.0700164744645799,"asymmetric_depth, unstable_return"
+0.06219110378912685,"asymmetric_depth, rushed_descent"
+0.061367380560131794,"asymmetric_start, rushed_descent"
+0.05930807248764415,"asymmetric_depth, asymmetric_start, rushed_descent"
+0.05395387149917628,"rushed_descent, unstable_return"
+0.04983525535420099,"asymmetric_start, high_jerk"
+0.04901153212520593,"asymmetric_depth, high_jerk"
+0.04242174629324547,"high_jerk, unstable_return"
+0.04036243822075782,excessive_lean
+0.036655683690280064,"asymmetric_start, unstable_return"
+0.036655683690280064,"asymmetric_depth, asymmetric_start, unstable_return"
+0.03377265238879736,"incomplete_depth, rushed_descent"

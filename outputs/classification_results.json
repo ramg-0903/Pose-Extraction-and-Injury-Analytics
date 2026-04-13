@@ -1,0 +1,66 @@
+{
+  "cv_results": {
+    "Dummy (baseline) (full)": {
+      "accuracy": 0.7084,
+      "f1_macro": 0.2764
+    },
+    "Logistic Regression (full)": {
+      "accuracy": 0.8989,
+      "f1_macro": 0.88
+    },
+    "Random Forest (full)": {
+      "accuracy": 0.9962,
+      "f1_macro": 0.9915
+    },
+    "Dummy (baseline) (honest)": {
+      "accuracy": 0.7084,
+      "f1_macro": 0.2764
+    },
+    "Logistic Regression (honest)": {
+      "accuracy": 0.6834,
+      "f1_macro": 0.58
+    },
+    "Random Forest (honest)": {
+      "accuracy": 0.8507,
+      "f1_macro": 0.6411
+    },
+    "Dummy (baseline) (binary)": {
+      "accuracy": 0.7476,
+      "f1_weighted": 0.6397
+    },
+    "Logistic Regression (binary)": {
+      "accuracy": 0.7973,
+      "f1_weighted": 0.807
+    },
+    "Random Forest (binary)": {
+      "accuracy": 0.887,
+      "f1_weighted": 0.8836
+    }
+  },
+  "top_5_features": [
+    "trunk_lean_max",
+    "trunk_lean_mean",
+    "trunk_lean_at_bottom",
+    "trunk_lean_range",
+    "knee_flexion_at_bottom"
+  ],
+  "n_samples_full": 2116,
+  "n_samples_honest": 2116,
+  "n_features_full": 15,
+  "n_features_honest": 11,
+  "label_features_excluded": [
+    "trunk_lean_max",
+    "trunk_lean_range",
+    "trunk_lean_at_bottom",
+    "trunk_lean_mean"
+  ],
+  "cv_folds": 5,
+  "n_importance_seeds": 10,
+  "random_seed": 42,
+  "class_distribution": {
+    "medium_risk": 1499,
+    "low_risk": 534,
+    "high_risk": 83
+  },
+  "primary_result_note": "Honest RF accuracy 0.8507 (kinematic features only) is the primary reportable result. Full RF 0.9962 includes trunk lean features used to define labels."
+}

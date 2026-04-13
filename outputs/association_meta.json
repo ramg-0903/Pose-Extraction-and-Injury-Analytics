@@ -1,0 +1,29 @@
+{
+  "backend": "fpgrowth",
+  "n_transactions": 2428,
+  "n_flags": 7,
+  "flags_used": [
+    "excessive_lean",
+    "asymmetric_depth",
+    "rushed_descent",
+    "high_jerk",
+    "incomplete_depth",
+    "unstable_return",
+    "asymmetric_start"
+  ],
+  "flags_missing": [],
+  "rare_flags": [],
+  "dominant_flags": [],
+  "high_corr_pairs": [],
+  "min_support": 0.03,
+  "min_confidence": 0.6,
+  "min_lift": 1.05,
+  "n_itemsets": 20,
+  "n_rules_total": 7,
+  "n_rules_filtered": 7,
+  "n_rules_stable": 6,
+  "n_injury_rules": 4,
+  "bootstrap_runs": 5,
+  "bootstrap_pct": 0.8,
+  "nan_cells_filled": 5840
+}

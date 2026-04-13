@@ -1,0 +1,8 @@
+antecedents,consequents,support,confidence,lift,leverage,conviction,bootstrap_support,is_stable
+"asymmetric_start, unstable_return",asymmetric_depth,0.0367,1.0,7.6352,0.0319,inf,5,1
+"asymmetric_start, rushed_descent",asymmetric_depth,0.0593,0.9664,7.379,0.0513,25.897,5,1
+"asymmetric_depth, rushed_descent",asymmetric_start,0.0593,0.9536,7.2358,0.0511,18.7284,5,1
+asymmetric_depth,asymmetric_start,0.0857,0.6541,4.9629,0.0684,2.5099,5,1
+asymmetric_start,asymmetric_depth,0.0857,0.65,4.9629,0.0684,2.4829,5,1
+unstable_return,asymmetric_depth,0.07,0.6182,4.72,0.0552,2.276,1,0
+"asymmetric_depth, asymmetric_start",rushed_descent,0.0593,0.6923,1.4269,0.0177,1.6732,5,1

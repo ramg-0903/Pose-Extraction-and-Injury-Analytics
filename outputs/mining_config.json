@@ -1,0 +1,72 @@
+{
+  "dataset": "/Users/ram/Desktop/Code/Pose-Extraction-and-Injury-Analytics/data/processed/master_dataset.csv",
+  "random_seed": 42,
+  "n_rows": 2428,
+  "n_features_used": 15,
+  "features_used": [
+    "knee_flexion_at_bottom",
+    "knee_flexion_range",
+    "trunk_lean_at_bottom",
+    "trunk_lean_mean",
+    "trunk_lean_max",
+    "trunk_lean_range",
+    "trunk_lean_at_end",
+    "descent_ascent_ratio",
+    "descent_time_s",
+    "ascent_time_s",
+    "knee_vel_max_descent",
+    "knee_vel_max_ascent",
+    "knee_jerk_max",
+    "knee_jerk_rms",
+    "normalized_jerk_cost"
+  ],
+  "pca_variance_threshold": 0.95,
+  "pca_anomaly_sigma": 2.0,
+  "dtw_max_k": 6,
+  "dtw_n_init": 10,
+  "arm_min_support": 0.03,
+  "arm_min_confidence": 0.6,
+  "arm_min_lift": 1.05,
+  "arm_exclude_flags": [
+    "shallow_squat",
+    "ankle_restricted",
+    "butt_wink"
+  ],
+  "rf_n_estimators": 200,
+  "rf_cv_folds": 5,
+  "rf_n_seeds": 10,
+  "all_flags": [
+    "shallow_squat",
+    "excessive_lean",
+    "asymmetric_depth",
+    "ankle_restricted",
+    "rushed_descent",
+    "butt_wink",
+    "high_jerk",
+    "incomplete_depth",
+    "unstable_return",
+    "asymmetric_start"
+  ],
+  "extra_flag_defs": {
+    "high_jerk": [
+      "knee_jerk_rms",
+      "gt",
+      "p75"
+    ],
+    "incomplete_depth": [
+      "knee_flexion_at_bottom",
+      "gt",
+      120.0
+    ],
+    "unstable_return": [
+      "symmetry_knee_at_end",
+      "gt",
+      15.0
+    ],
+    "asymmetric_start": [
+      "symmetry_knee_at_start",
+      "gt",
+      10.0
+    ]
+  }
+}
