@@ -1,2 +1,9 @@
 venv/
 data/
+node_modules/
+dist/
+vendor/
+*.generated.py
+graphify-out/
+CLAUDE.md
+.claude/

@@ -49,10 +49,10 @@
   "n_features_full": 15,
   "n_features_honest": 11,
   "label_features_excluded": [
-    "trunk_lean_max",
     "trunk_lean_range",
-    "trunk_lean_at_bottom",
-    "trunk_lean_mean"
+    "trunk_lean_mean",
+    "trunk_lean_max",
+    "trunk_lean_at_bottom"
   ],
   "cv_folds": 5,
   "n_importance_seeds": 10,

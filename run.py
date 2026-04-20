@@ -1,55 +1,40 @@
 """
-run.py
-======
-Single CLI entry point. Runs Stages 1–3 in sequence.
+Single-video CLI.  Thin wrapper around squat_analysis.pipeline.
 
 Usage:
     python run.py --video data/raw_videos/session_01.mp4
     python run.py --video data/raw_videos/session_01.mp4 --session my_session
     python run.py --video data/raw_videos/session_01.mp4 --max-frames 300
-    python run.py --video data/raw_videos/session_01.mp4 --save-trajectories
 """
 
 import argparse
-from pathlib import Path
+import logging
 
-from squat_analysis.extraction import extract
-from squat_analysis.preprocessing import preprocess
-from squat_analysis.features import extract_features
+from squat_analysis.pipeline import run_pipeline
+
+logging.basicConfig(level=logging.INFO, format="%(message)s")
 
 
 def main():
-    parser = argparse.ArgumentParser(
-        description="Squat analysis pipeline: video → features"
-    )
-    parser.add_argument("--video",              required=True)
-    parser.add_argument("--session",            default=None)
-    parser.add_argument("--max-frames",         type=int, default=None)
-    parser.add_argument("--save-trajectories",  action="store_true",
-                        help="Save per-rep angle trajectories for debugging")
+    parser = argparse.ArgumentParser(description="Squat analysis: video → features")
+    parser.add_argument("--video",             required=True)
+    parser.add_argument("--session",           default=None)
+    parser.add_argument("--max-frames",        type=int, default=None)
+    parser.add_argument("--save-trajectories", action="store_true")
     args = parser.parse_args()
 
-    # Stage 1 — extract raw landmarks
-    session_dir = extract(
+    result = run_pipeline(
         video_path=args.video,
         session_id=args.session,
         max_frames=args.max_frames,
-    )
-
-    # Stage 2 — preprocess
-    preprocess(str(session_dir))
-
-    # Stage 3 — features
-    df = extract_features(
-        str(session_dir),
         save_trajectories=args.save_trajectories,
     )
 
     print(f"\nPipeline complete.")
-    print(f"  Session : {session_dir}")
-    print(f"  Reps    : {len(df)}")
-    print(f"  Features: {len(df.columns)} columns")
-    print(f"  CSV     : {session_dir / 'features.csv'}")
+    print(f"  Session : {result['session_dir']}")
+    print(f"  Reps    : {result['n_reps']}")
+    print(f"  Time    : {result['duration_s']:.1f}s")
+    print(f"  CSV     : {result['session_dir'] / 'features.csv'}")
 
 
 if __name__ == "__main__":

@@ -1,5 +1,5 @@
 {
-  "dataset": "/Users/ram/Desktop/Code/Pose-Extraction-and-Injury-Analytics/data/processed/master_dataset.csv",
+  "dataset": "data/processed/master_dataset.csv",
   "random_seed": 42,
   "n_rows": 2428,
   "n_features_used": 15,
